@@ -13,7 +13,8 @@ export class BonjourAvecPrenomComponent implements OnInit {
 
 
   constructor() { 
-    // this.prenom = 'Philippe'; //valorisation de la propriété
+    this.prenom = "Philippe";
+    
   }
  
 
