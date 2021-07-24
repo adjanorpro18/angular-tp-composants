@@ -1,0 +1,30 @@
+.collegue {
+    max-width: 100vh;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 5px 10px;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.bouton {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    margin-left: 7px;
+}

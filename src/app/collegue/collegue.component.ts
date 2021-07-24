@@ -3,26 +3,37 @@ import { Collegue } from '../models/collegue';
 
 @Component({
   selector: 'app-collegue',
-  template: ` <p>
-                    {{col.matricule}}
-                    {{col.nom}}
-                    {{col.prenoms}}
-                    {{col.dateDeNaissance}}
-                    {{col.email}}
-              </p>`,
+  templateUrl: './collegue.component.html',
   styleUrls: ['./collegue.component.css']
 })
 export class CollegueComponent implements OnInit {
 
-  //Ajouter un objet du type collegue
+  //Ajouter un input du type Collegue
 
   @Input() col: Collegue;
+
+  //Alignement du template
+  public alignement:string = "center";
 
 
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  //la fonction de creation d'un nouveau collegue
+  creer():void{
+
+    console.log("Creation d'un nouveau collègue")
+
+  }
+
+  //la fonction de modification d'un nouveau collegue
+
+  modifier():void{
+
+    console.log("Modification du collègue")
   }
 
 }

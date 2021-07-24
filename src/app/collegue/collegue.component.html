@@ -1,0 +1,16 @@
+<div class="collegue">
+    <div class="image">
+        <img src={{col.photoUrl}} alt="image collègue">
+    </div>
+    <div class="data">
+        <p>Matricule : {{col.matricule}}</p>
+        <p>Nom : {{col.nom}}</p>
+        <p>Prénoms : {{col.prenoms}}</p>
+        <p>Date de naissance : {{col.dateDeNaissance}}</p>
+        <p>Email : {{col.email}}</p>
+    </div>
+</div>
+<div class="bouton mt-3">
+    <a href="#" (click)="creer()"> Créer un nouveau collègue</a>
+    <button class="btn btn-primary" (click)="modifier()"> Modifier</button>
+</div>

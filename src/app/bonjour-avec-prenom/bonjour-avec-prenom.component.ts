@@ -13,7 +13,7 @@ export class BonjourAvecPrenomComponent implements OnInit {
 
 
   constructor() { 
-    this.prenom = "Philippe";
+    //this.prenom = "Philippe";
     
   }
  

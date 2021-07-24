@@ -7,9 +7,9 @@ export class ColleguesMock {
         matricule: '12355',
         nom: 'Germain',
         prenoms:'Christophe',
-        dateDeNaissance: new Date("January 01, 1970"),
+        dateDeNaissance: new Date("1970,04,25"),
         email:'christophegermain@gmail.com',
-        photoUrl: ""
+        photoUrl: "../../assets/images/angular.png "
 
     };
 }
