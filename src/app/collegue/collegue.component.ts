@@ -15,6 +15,8 @@ export class CollegueComponent implements OnInit {
   //Alignement du template
   public alignement:string = "center";
 
+  showEmailAndPhotoUrlInputField:boolean = true;
+
 
 
   constructor() { }
@@ -26,6 +28,7 @@ export class CollegueComponent implements OnInit {
   creer():void{
 
     console.log("Creation d'un nouveau collègue")
+    this.showEmailAndPhotoUrlInputField = false;
 
   }
 
@@ -34,6 +37,15 @@ export class CollegueComponent implements OnInit {
   modifier():void{
 
     console.log("Modification du collègue")
+    this.showEmailAndPhotoUrlInputField = true;
+  }
+
+  //la fonction de validation d'un nouveau collegue
+
+  valider():void{
+
+    console.log("Modification du collègue")
+    this.showEmailAndPhotoUrlInputField = false;
   }
 
 }

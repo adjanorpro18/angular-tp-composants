@@ -8,9 +8,25 @@
         <p>Prénoms : {{col.prenoms}}</p>
         <p>Date de naissance : {{col.dateDeNaissance}}</p>
         <p>Email : {{col.email}}</p>
+        <div *ngIf="showEmailAndPhotoUrlInputField; then thenBlock"></div>
+        <ng-template #thenBlock>
+            <p>
+                <label for="photo">photoUrl: </label>&nbsp;
+                <input type="text" name="photoUrl" id="photoUrl">
+            </p>
+            <p>
+                <label for="email">Email: </label>&nbsp;
+                <input type="email" name="email" id="email">
+            </p>
+        </ng-template>
+
     </div>
 </div>
-<div class="bouton mt-3">
-    <a href="#" (click)="creer()"> Créer un nouveau collègue</a>
-    <button class="btn btn-primary" (click)="modifier()"> Modifier</button>
+<div class="bouton ">
+    <!-- Ici -->
+    <a href="#" *ngIf="!showEmailAndPhotoUrlInputField" (click)="creer()"> Créer un nouveau collègue</a>
+
+    <button *ngIf="showEmailAndPhotoUrlInputField" class="btn btn-primary" (click)="valider()"> Valider</button>
+    <button *ngIf=" !showEmailAndPhotoUrlInputField" class="btn btn-warning" (click)="modifier()"> Modifier</button>
+
 </div>
