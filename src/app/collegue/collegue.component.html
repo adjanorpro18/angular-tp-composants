@@ -1,18 +1,18 @@
 <div class="container-fluid">
-    <div class="collegue">
+    <div class="card">
         <div class="image">
             <img src={{col.photoUrl}} alt="image collègue">
         </div>
-        <div class="data">
+        <div class="card-body">
             <p>Matricule : {{col.matricule}}</p>
             <p>Nom : {{col.nom | uppercase}} </p>
             <p>Prénoms : {{col.prenoms}}</p>
             <p>Date de naissance : {{col.dateDeNaissance | date:'dd/MM/yyyy'}}</p>
             <p>Email : {{col.email}}</p>
-            <div *ngIf="showEmailAndPhotoUrlInputField; then thenBlock"></div>
+            <div *ngIf="showInput; then thenBlock"></div>
             <ng-template #thenBlock>
                 <p>
-                    <label for="photo">PhotoU: </label>&nbsp;
+                    <label for="photo">PhotoURL: </label>&nbsp;
                     <input type="text" name="photoUrl" id="photoUrl">
                 </p>
                 <p>
@@ -24,9 +24,9 @@
     </div>
     <div class="bouton ">
         <!-- Ici -->
-        <a href="#" *ngIf="!showEmailAndPhotoUrlInputField" (click)="creer()"> Créer un nouveau collègue</a>
-        <button *ngIf="showEmailAndPhotoUrlInputField" class="btn btn-primary" (click)="valider()"> Valider</button>
-        <button *ngIf=" !showEmailAndPhotoUrlInputField" class="btn btn-warning" (click)="modifier()"> Modifier</button>
+        <a href="#" *ngIf="!showInput" (click)="creer()"> Créer un nouveau collègue</a>
+        <button *ngIf="showInput" class="btn btn-primary" (click)="valider()"> Valider</button>
+        <button *ngIf=" !showInput" class="btn btn-warning" (click)="modifier()"> Modifier</button>
 
     </div>
 

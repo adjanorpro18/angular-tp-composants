@@ -8,6 +8,7 @@ import { BonjourAvecPrenomComponent } from './bonjour-avec-prenom/bonjour-avec-p
 import { CollegueComponent } from './collegue/collegue.component';
 import { FormsModule } from '@angular/forms';
 import { RechercheCollegueParNomComponent } from './recherche-collegue-par-nom/recherche-collegue-par-nom.component';
+import { DataService } from './services/data.service';
 
 
 @NgModule({
@@ -23,7 +24,9 @@ import { RechercheCollegueParNomComponent } from './recherche-collegue-par-nom/r
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    DataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

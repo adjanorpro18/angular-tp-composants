@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Collegue } from '../models/collegue';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-recherche-collegue-par-nom',
@@ -10,19 +11,21 @@ export class RechercheCollegueParNomComponent implements OnInit {
 
  @Input() collegues: Collegue[] = [];
 
+
  state:boolean = false;
 
 
-  constructor() { }
+  constructor(private service:DataService) { }
 
   ngOnInit(): void {
   }
 
-  afficher(): void{
-
-     this.collegues = this.collegues;
-     this.state = true;
+  afficher(){
+    
+    this.state = true;
+    return this.service.recupereCollegueCourant() ;
     
   }
 
 }
+

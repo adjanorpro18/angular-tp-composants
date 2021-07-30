@@ -7,5 +7,7 @@ export class Collegue {
     dateDeNaissance:Date;
     photoUrl:string;
 
+    constructor(){}
+
 }
 

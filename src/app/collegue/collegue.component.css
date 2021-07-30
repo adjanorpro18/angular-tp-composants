@@ -1,37 +1,35 @@
-.collegue {
+.card {
     max-width: 100vh;
-    display: flex;
-    width: 500px
-}
-
-.header {
     display: inline-block;
-    padding: 5px;
-    margin-top: 0;
+    width: 500px;
+    border: 0;
 }
 
-.data {
+.card-body {
+    float: right;
     display: block;
 }
 
-.data label {
+.card-body label {
     float: left;
+    margin-left: 0;
 }
 
-.data input {
+.card-body input {
     float: right;
+    margin-left: 5px;
 }
 
 .image {
-    display: block;
     float: left;
-    width: 130px;
-    ;
+    width: auto;
+    margin: 5px;
 }
 
 img {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
+    border: 1px solid #ddd;
     border-radius: 5px;
     margin-top: 5px;
 }

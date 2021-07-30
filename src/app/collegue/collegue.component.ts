@@ -1,5 +1,8 @@
+
 import { Component, Input, OnInit } from '@angular/core';
+import { ColleguesMock } from '../mock/collegues-mock';
 import { Collegue } from '../models/collegue';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-collegue',
@@ -9,40 +12,36 @@ import { Collegue } from '../models/collegue';
 export class CollegueComponent implements OnInit {
 
 
-  @Input() col: Collegue = new Collegue() ;
+  @Input() col: Collegue = null;
 
 
-  showEmailAndPhotoUrlInputField:boolean = true;
+  showInput:boolean = false;
 
 
-  constructor() { }
+  constructor( private service:DataService) { }
 
   ngOnInit(): void {
+    this.service.recupereCollegueCourant();
   }
 
 
   creer():void{
 
-    this.showEmailAndPhotoUrlInputField = true;
+    this.showInput = true;
 
   }
 
   modifier():void{
    
-    this.showEmailAndPhotoUrlInputField = true;
+    this.showInput = true;
   }
 
   
 
   valider():void{
     
-    this.showEmailAndPhotoUrlInputField = false;
+    this.showInput = false;
   }
-
-    rechercher(): void{
-      
-    
-    }
 
 
 }
