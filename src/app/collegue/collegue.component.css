@@ -1,31 +1,39 @@
 .collegue {
     max-width: 100vh;
-    padding: 5px;
-    margin: 5px;
     display: flex;
+    width: 500px
 }
 
 .header {
     display: inline-block;
     padding: 5px;
+    margin-top: 0;
 }
 
 .data {
     display: block;
+}
+
+.data label {
+    float: left;
+}
+
+.data input {
     float: right;
-    margin-left: 5px;
 }
 
 .image {
     display: block;
     float: left;
-    margin-right: 5px;
+    width: 130px;
+    ;
 }
 
 img {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     border-radius: 5px;
+    margin-top: 5px;
 }
 
 .bouton {

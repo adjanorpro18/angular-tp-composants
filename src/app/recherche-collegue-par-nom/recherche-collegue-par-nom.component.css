@@ -2,3 +2,7 @@ ul>li {
     list-style: none;
     padding: 5px;
 }
+
+.header {
+    width: 450px
+}

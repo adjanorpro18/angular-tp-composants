@@ -5,7 +5,12 @@
 <app-bonjour-avec-prenom [prenom]=" ' Igor' "></app-bonjour-avec-prenom>
 <app-bonjour-avec-prenom [prenom]=" ' Martin' "></app-bonjour-avec-prenom> -->
 
-<h1 class="text-center">Administration Collegue</h1>
+<div class="container w-1000">
+    <h1 class="text-center p-3 m-4">Administration Collegue</h1>
+    <div class="component d-flex">
+        <app-recherche-collegue-par-nom [collegues]="collegues"></app-recherche-collegue-par-nom>
 
-<app-collegue [col]="collegue"></app-collegue>
-<app-recherche-collegue-par-nom [collegues]="collegues"></app-recherche-collegue-par-nom>
+        <app-collegue [col]="collegue"></app-collegue>
+    </div>
+
+</div>

@@ -7,7 +7,7 @@
 <ng-container *ngIf="state">
     <ul *ngIf="collegues.length">
         <li *ngFor="let collegue of collegues">
-            {{collegue.matricule}} : {{collegue.prenoms}}
+            {{collegue.matricule}} : {{collegue.prenoms}} {{collegue.nom}}
         </li>
     </ul>
 
