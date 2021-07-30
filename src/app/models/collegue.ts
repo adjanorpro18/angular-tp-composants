@@ -8,3 +8,4 @@ export class Collegue {
     photoUrl:string;
 
 }
+

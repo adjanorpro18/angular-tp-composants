@@ -1,0 +1,14 @@
+<div class=header>
+    <label for="nom">Recherche par nom: </label>&nbsp;
+    <input type="text" name="nom" id="nom">
+    <button *ngIf="!state" class="btn btn-primary m-3" (click)="afficher()"> Rechercher</button>
+</div>
+
+<ng-container *ngIf="state">
+    <ul *ngIf="collegues.length">
+        <li *ngFor="let collegue of collegues">
+            {{collegue.matricule}} : {{collegue.prenoms}}
+        </li>
+    </ul>
+
+</ng-container>

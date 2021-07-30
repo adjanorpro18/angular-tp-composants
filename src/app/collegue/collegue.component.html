@@ -1,32 +1,39 @@
-<div class="collegue">
-    <div class="image">
-        <img src={{col.photoUrl}} alt="image collègue">
+<div class="container-fluid">
+    <div class=header>
+        <label for="nom">Recherche par nom: </label>&nbsp;
+        <input type="text" name="nom" id="nom">
     </div>
-    <div class="data">
-        <p>Matricule : {{col.matricule}}</p>
-        <p>Nom : {{col.nom}}</p>
-        <p>Prénoms : {{col.prenoms}}</p>
-        <p>Date de naissance : {{col.dateDeNaissance}}</p>
-        <p>Email : {{col.email}}</p>
-        <div *ngIf="showEmailAndPhotoUrlInputField; then thenBlock"></div>
-        <ng-template #thenBlock>
-            <p>
-                <label for="photo">photoUrl: </label>&nbsp;
-                <input type="text" name="photoUrl" id="photoUrl">
-            </p>
-            <p>
-                <label for="email">Email: </label>&nbsp;
-                <input type="email" name="email" id="email">
-            </p>
-        </ng-template>
+    <button class="btn btn-primary" (click)="rechercher()"> Rechercher</button>
+
+    <div class="collegue">
+        <div class="image">
+            <img src={{col.photoUrl}} alt="image collègue">
+        </div>
+        <div class="data">
+            <p>Matricule : {{col.matricule}}</p>
+            <p>Nom : {{col.nom | uppercase}} </p>
+            <p>Prénoms : {{col.prenoms}}</p>
+            <p>Date de naissance : {{col.dateDeNaissance | date:'dd/MM/yyyy'}}</p>
+            <p>Email : {{col.email}}</p>
+            <div *ngIf="showEmailAndPhotoUrlInputField; then thenBlock"></div>
+            <ng-template #thenBlock>
+                <p>
+                    <label for="photo">PhotoU: </label>&nbsp;
+                    <input type="text" name="photoUrl" id="photoUrl">
+                </p>
+                <p>
+                    <label for="email">Email: </label>&nbsp;
+                    <input type="email" name="email" id="email">
+                </p>
+            </ng-template>
+        </div>
+    </div>
+    <div class="bouton ">
+        <!-- Ici -->
+        <a href="#" *ngIf="!showEmailAndPhotoUrlInputField" (click)="creer()"> Créer un nouveau collègue</a>
+        <button *ngIf="showEmailAndPhotoUrlInputField" class="btn btn-primary" (click)="valider()"> Valider</button>
+        <button *ngIf=" !showEmailAndPhotoUrlInputField" class="btn btn-warning" (click)="modifier()"> Modifier</button>
 
     </div>
-</div>
-<div class="bouton ">
-    <!-- Ici -->
-    <a href="#" *ngIf="!showEmailAndPhotoUrlInputField" (click)="creer()"> Créer un nouveau collègue</a>
-
-    <button *ngIf="showEmailAndPhotoUrlInputField" class="btn btn-primary" (click)="valider()"> Valider</button>
-    <button *ngIf=" !showEmailAndPhotoUrlInputField" class="btn btn-warning" (click)="modifier()"> Modifier</button>
 
 </div>
